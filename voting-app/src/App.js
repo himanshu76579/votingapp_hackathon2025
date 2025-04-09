@@ -24,6 +24,7 @@ function App() {
         <Route path="/fingerprint" element={<FingerprintScan />} />
         <Route path="/vote" element={<VoteSelection />} />
       <Route path="/states" element={<States />} />
+      //Hello
       <Route path="/villages" element={<Villages />} />
       </Routes>
 
