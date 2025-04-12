@@ -1,38 +1,101 @@
-/* Navbar.css */
+ /* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #002366;
-    padding: 10px 30px;
-    color: white;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Serious but stylish color scheme */
+  background: linear-gradient(90deg, #001f4d, #003c8a);
   
-  .navbar-logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .flag {
-    width: 40px;
-    margin-right: 10px;
-  }
-  
-  .navbar-links a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .vote-btn {
-    background-color: #ff9933;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
-  }
-  
-  .vote-btn:hover {
-    background-color: #ff8800;
-  }
-  
+  padding: 12px 30px;
+  color: white;
+
+  /* Subtle drop shadow to elevate the navbar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Left: Logo + Title */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Optional Center: Search bar (if you use it) */
+.navbar-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-search input {
+  width: 300px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+}
+
+/* Right: Links + Vote Btn */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between items */
+}
+
+/* Normal Links */
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hover underline effect */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: #ffcc00; /* Slight highlight color */
+}
+
+/* Vote Button */
+.vote-btn {
+  background: #ff9933;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none; /* For Link styling */
+  transition: background 0.3s, transform 0.3s;
+}
+
+.vote-btn:hover {
+  background-color: #e6851f;
+  transform: translateY(-2px);
+}
+

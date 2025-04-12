@@ -17,7 +17,6 @@ const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
 
     try {
       const response = await fetch("http://localhost:8000/api/voter/register", {
@@ -30,7 +29,6 @@ const RegisterForm = () => {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         alert("User registered successfully!");
         console.log("Success:", data);
@@ -43,6 +41,7 @@ const RegisterForm = () => {
       console.error("Error:", error);
       alert("Something went wrong. Try again later.");
     }
+
   };
 
   return (
