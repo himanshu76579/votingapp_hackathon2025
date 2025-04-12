@@ -29,6 +29,19 @@ const RegisterForm = () => {
       });
 
       const data = await response.json();
+      if (response.ok) {
+        alert("User registered successfully!");
+        console.log("Success:", data);
+        // You can optionally reset the form:
+        // setFormData({ username: "", mobile: "", voterId: "", aadhar: "", gender: "", dob: "" });
+      } else {
+        alert(data.message || "Registration failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Try again later.");
+    }
+
   };
 
   return (
