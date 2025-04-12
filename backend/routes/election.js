@@ -2,14 +2,16 @@
 import express from 'express';
 import Voter from '../models/voters.js';
 import Location from '../models/location.js';
-import authenticateUser from '../middleware/authenticateUser.js';
+import authenticateUser from '../middleware/auth.js';
 
 const router = express.Router();
 
 // Get election status for user's location
-router.get("/election-levels", authenticateUser, async (req, res) => {
+router.get("/", authenticateUser, async (req, res) => {
   try {
-    const voterId = req.user.userId;
+    console.log(req.user);
+    const voterId = req.user.id;
+    console.log("voter is ",voterId);
     const voter = await Voter.findById(voterId);
 
     if (!voter) return res.status(404).json({ message: "Voter not found" });

@@ -8,25 +8,24 @@ export const registerVoter = async (req, res) => {
 
     const { fullname, gender, dob, aadharNo, voterIdNo } = req.body;
 
-    // ✅ Check for all required fields
+    // Check for required fields
     if (!fullname || !gender || !dob || !aadharNo || !voterIdNo) {
       return res.status(400).json({ message: "All fields are required." });
     }
 
-    // ✅ Check if user with this Aadhar exists in the User collection
+    // Check if user with this Aadhar exists in User DB
     const existingUser = await User.findOne({ aadharNo });
     if (!existingUser) {
       return res.status(404).json({ message: "This Aadhar number does not exist." });
     }
 
-
-    // ✅ Prevent re-registration
+    // Prevent duplicate registration
     const alreadyRegistered = await Voter.findOne({ aadharNo });
     if (alreadyRegistered) {
       return res.status(409).json({ message: "Voter with this Aadhar is already registered." });
     }
 
-    // ✅ Save voter
+    // Save the voter
     const newVoter = new Voter({
       fullname,
       gender,
@@ -35,41 +34,36 @@ export const registerVoter = async (req, res) => {
       voterIdNo,
       address: existingUser.address
     });
+
     await newVoter.save();
 
-    // ✅ Generate JWT token
-    const token = jwt.sign(
-      {
-        userId: newVoter._id,
-        voterIdNo: newVoter.voterIdNo,
-      },
-      process.env.JWT_SECRET,
-      { expiresIn: "1000m" }
-    );
+    // ✅ Include full voter data in JWT token (excluding sensitive timestamps)
+    const tokenPayload = {
+      id: newVoter._id,
+      fullname: newVoter.fullname,
+      gender: newVoter.gender,
+      dob: newVoter.dob,
+      aadharNo: newVoter.aadharNo,
+      voterIdNo: newVoter.voterIdNo,
+      address: newVoter.address
+    };
 
-    console.log("Token -> ", token);
-    
+    const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, {
+      expiresIn: "1d", // 1 day
+    });
+
     // ✅ Set JWT in cookie
-    res.cookie('jwt', token, {
-        httpOnly: true,
-        secure: false, // should be true in production with HTTPS
-        sameSite: 'Lax', // or 'None' if you're on different domains & using HTTPS
-        maxAge: 24 * 60 * 60 * 1000, // 1 day
-      });
-      
+    res.cookie("jwt", token, {
+      httpOnly: true,
+      secure: false, // true in production with HTTPS
+      sameSite: "Lax",
+      maxAge: 24 * 60 * 60 * 1000, // 1 day
+    });
 
-    // ✅ Send response
+    // ✅ Response with user info
     return res.status(201).json({
       message: "Voter registered successfully.",
-      voter: {
-        id: newVoter._id,
-        fullname: newVoter.fullname,
-        gender: newVoter.gender,
-        dob: newVoter.dob,
-        aadharNo: newVoter.aadharNo,
-        voterIdNo: newVoter.voterIdNo,
-        address : newVoter.address,
-      },
+      voter: tokenPayload,
     });
 
   } catch (error) {

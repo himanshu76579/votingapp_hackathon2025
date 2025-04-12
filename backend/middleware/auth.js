@@ -1,27 +1,20 @@
-
 import jwt from 'jsonwebtoken';
 
-// Middleware to check if the user is authenticated
 const authenticateUser = (req, res, next) => {
-  console.log("chekc auth");
-  const token = req.cookies.token;
-
-  console.log("token",token);
+  const token = req.cookies.jwt;
 
   if (!token) {
-    return res.redirect('http://localhost:3000/login'); // or: res.status(401).send("Unauthorized");
+    return res.status(401).json({ message: 'Not authenticated' });
   }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
+    req.user = decoded; // Contains all voter fields
     next();
   } catch (err) {
-    console.error("JWT verification error:", err.message);
-    return res.redirect('http://localhost:3000/login');
+    console.error("JWT verification failed:", err.message);
+    return res.status(401).json({ message: 'Invalid or expired token' });
   }
 };
 
-export default authenticateUser
-
-
+export default authenticateUser;

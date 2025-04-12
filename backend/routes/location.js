@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 import registerTheLocation from "../controllers/location.js";
-import Location from "../models/location.js";
+// import Location from "../models/location.js";
 
 router.post("/register", registerTheLocation);
 
