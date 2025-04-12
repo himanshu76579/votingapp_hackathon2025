@@ -6,7 +6,9 @@ const voterRouter = express.Router();
 
 voterRouter
 .post("/register", registerVoter)
-
+.get("/address",async(req,res) => {
+    
+})
 
 
 export default voterRouter;

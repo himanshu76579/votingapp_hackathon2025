@@ -11,6 +11,9 @@ import cors from "cors"
 import jwt from "jsonwebtoken";
 import partyRouter from "./routes/party.js";
 import locationRouter from "./routes/location.js"
+import electionRouter from "./routes/election.js";
+
+
 // import authenticateUser from "./middleware/auth.js";
 // import messageRouter from "./routes/message.js"
 
@@ -18,6 +21,7 @@ dotenv.config({});
 
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api", electionRouter);
 // app.use(authenticateUser);
 // app.use(authStatusRoute);
 app.use(cors({
