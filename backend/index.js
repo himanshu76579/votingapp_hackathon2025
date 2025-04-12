@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
 import voterRouter from "./routes/voter.js";
-import  authStatusRoute from "./routes/auth.js";
+// import  authStatusRoute from "./routes/auth.js";
 import userRouter from "./routes/user.js"
 import cors from "cors"
 import jwt from "jsonwebtoken";
@@ -34,7 +34,7 @@ app.use(cors({
     return res.json({message : "hi"})
   })
 
-app.use("/api",authStatusRoute);
+app.use("/api/elections",electionRouter);
 app.use("/api/user",userRouter);
 app.use("/api/voter",voterRouter)
 app.use("/api/location",locationRouter);
