@@ -7,9 +7,9 @@ import Footer from './components/Footer';
 import LoginPage from './components/Loginpage';
 import Home from './components/Home';
 import FingerprintScan from './components/FingerprintScan';
-import Villages from './components/Villages';
-import States  from './components/States';
-import VoteSelection from './components/VoteSelection';
+import States from './components/States';
+
+import CheckElection from './components/CheckElection';
 
 function App() {
   return (
@@ -23,10 +23,10 @@ function App() {
         //Main hoon baap coder
         <Route path="/login" element={<LoginPage />} />
         <Route path="/fingerprint" element={<FingerprintScan />} />
-        <Route path="/vote" element={<VoteSelection />} />
-      <Route path="/states" element={<States />} />
+        <Route path="/vote" element={<States />} />
+      {/* <Route path="/states" element={<States />} />
       //Hello
-      <Route path="/villages" element={<Villages />} />
+      <Route path="/villages" element={<Villages />} /> */}
       </Routes>
 
    

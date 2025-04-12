@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import flag from '../assets/flag.png'; // 🏳️ Add Indian flag in /assets
+import flag from '../assets/flag.png'; // 🏳️ Add 
+// import Indian flag in /assets
+import VoteButton from './VoteButton';
 
 const Navbar = () => {
   return (
@@ -12,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
-        <Link to="/vote" className="vote-btn">Vote</Link>
+        <VoteButton/>
       </div>
     </nav>
   );

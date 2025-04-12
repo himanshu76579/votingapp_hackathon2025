@@ -1,81 +1,87 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Step 1
-import './Loginpage.css';
+import React, { useState } from "react";
+import "./Loginpage.css"; // Ensure this file has your styles
 
-const LoginPage = () => {
-  const navigate = useNavigate(); // ✅ Step 2
-
+const RegisterForm = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    voterId: '',
-    mobile: '',
-    Aadharnumber: '',
-    voterIdPhoto: null,
+    fullname: "",
+    gender: "",
+    dob: "",
+    aadhar: "",
+    voterId: "",
   });
 
-  const [error, setError] = useState('');
-
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: files ? files[0] : value,
-    }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { username, voterId, mobile, voterIdPhoto, Aadharnumber } = formData;
+    console.log(formData);
 
-    if (!username || !voterId || !mobile || !voterIdPhoto || !Aadharnumber) {
-      setError('All fields are required!');
-      return;
+    try {
+      const response = await fetch("http://localhost:8000/api/voter/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: 'include',
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("User registered successfully!");
+        console.log("Success:", data);
+        // You can optionally reset the form:
+        // setFormData({ username: "", mobile: "", voterId: "", aadhar: "", gender: "", dob: "" });
+      } else {
+        alert(data.message || "Registration failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Try again later.");
     }
-
-    setError('');
-    console.log('Registered Data:', formData);
-
-    // ✅ Step 3: Redirect to fingerprint scan page
-    navigate('/fingerprint');
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
+    <div className="form-container">
+      <form className="register-form" onSubmit={handleSubmit}>
         <h2>Voter Registration</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label>Username</label>
-            <input type="text" name="username" value={formData.username} onChange={handleChange} />
-          </div>
 
-          <div className="input-group">
-            <label>Mobile Number</label>
-            <input type="text" name="mobile" value={formData.mobile} onChange={handleChange} />
-          </div>
+        <label htmlFor="username">Username</label>
+        <input type="text" id="username" name="fullname" onChange={handleChange} required />
 
-          <div className="input-group">
-            <label>Voter ID Number</label>
-            <input type="text" name="voterId" value={formData.voterId} onChange={handleChange} />
-          </div>
+       
 
-          <div className="input-group">
-            <label>Aadhar Number</label>
-            <input type="text" name="Aadharnumber" value={formData.Aadharnumber} onChange={handleChange} />
-          </div>
+        <label>Gender</label>
+        <div className="radio-group">
+          <label>
+            <input type="radio" name="gender" value="male" onChange={handleChange} required /> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" onChange={handleChange} /> Female
+          </label>
+        </div>
 
-          <div className="input-group">
-            <label>Upload Voter ID Photo</label>
-            <input type="file" name="voterIdPhoto" onChange={handleChange} accept="image/*" />
-          </div>
+        <label htmlFor="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" onChange={handleChange} required />
 
-          {error && <div className="error-msg">{error}</div>}
+        <label htmlFor="aadhar">Aadhar Number</label>
+        <input type="text" id="aadhar" name="aadharNo" onChange={handleChange} required />
 
-          <button type="submit">Register</button>
-        </form>
-      </div>
+        <label htmlFor="voterId">Voter ID Number</label>
+        <input type="text" id="voterId" name="voterIdNo" onChange={handleChange} required />
+
+        <button type="submit">Register</button>
+      </form>
+
+      <footer className="footer">
+        © 2025 Voting App | All rights reserved.
+      </footer>
     </div>
   );
 };
 
-export default LoginPage;
+export default RegisterForm;
