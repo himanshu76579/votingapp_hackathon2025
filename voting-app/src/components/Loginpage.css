@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f6fb;
@@ -73,5 +73,210 @@ body {
   color: white;
   text-align: center;
   padding: 12px 0;
+  margin-top: auto;
+}
+
+ */
+
+
+
+/* -----------------------------------------------------
+  1. ROOT & GLOBAL SETTINGS
+------------------------------------------------------ */
+
+/* Optional: A nice, modern font like 'Inter' or 'Nunito' */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for color palette and consistent usage */
+:root {
+  --main-bg: #f5f9ff;      /* Page background color */
+  --primary-color: #0047ab; /* Official-like color (blue) */
+  --accent-color: #007bff;  /* Accent color for focus/hover */
+  --card-bg: rgba(255, 255, 255, 0.3);
+  --label-color: #444444;
+  --footer-bg: #002766;
+  --text-color: #222222;
+  --input-bg: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--main-bg);
+  
+  /* Advanced layered radial gradients for subtle background interest */
+  background: radial-gradient(ellipse at top left, #eef3fa, transparent 30%),
+              radial-gradient(ellipse at bottom right, #e0e6f5, transparent 40%),
+              var(--main-bg);
+  
+  /* Expand to full viewport height, with flex layout for easy centering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Consider adding a top-level fade-in for the entire page */
+  animation: pageFadeIn 0.6s ease-in-out forwards;
+  overflow-x: hidden;
+}
+
+/* Page fade-in keyframes */
+@keyframes pageFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* -----------------------------------------------------
+  2. FORM CONTAINER
+------------------------------------------------------ */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* push footer to bottom */
+  padding: 20px;
+}
+
+/* -----------------------------------------------------
+  3. REGISTER FORM (Card)
+------------------------------------------------------ */
+.register-form {
+  /* Glassmorphism effect: translucent background + blur */
+  background: var(--card-bg);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  width: 100%;
+
+  padding: 40px 35px;
+  margin: 20px auto;
+
+  /* Subtle drop/scale in animation */
+  animation: formDropIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateY(20px);
+  opacity: 0; /* start invisible */
+}
+
+@keyframes formDropIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* On hover, add a gentle lift effect */
+.register-form:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s;
+}
+
+/* Headline */
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Labels */
+.register-form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: var(--label-color);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.register-form label:hover {
+  color: var(--accent-color);
+}
+
+/* -----------------------------------------------------
+  4. INPUTS & RADIO
+------------------------------------------------------ */
+.register-form input[type="text"],
+.register-form input[type="date"] {
+  width: 100%;
+  padding: 11px 12px;
+  margin-top: 6px;
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.96rem;
+  transition: all 0.2s ease;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* Focus state with accent glow */
+.register-form input:focus {
+  border-color: var(--accent-color);
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* -----------------------------------------------------
+  5. BUTTON
+------------------------------------------------------ */
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 24px;
+
+  /* Subtle gradient for the button */
+  background: linear-gradient(90deg, var(--accent-color), #0056b3);
+  border: none;
+  border-radius: 8px;
+
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+/* Slight push-up and shadow on hover */
+.register-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+  filter: brightness(1.05);
+}
+
+/* -----------------------------------------------------
+  6. FOOTER
+------------------------------------------------------ */
+.footer {
+  background-color: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   margin-top: auto;
 }
