@@ -1,0 +1,56 @@
+.election-container {
+    min-height: calc(100vh - 60px); /* assuming navbar height ~60px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* pushes content slightly below navbar */
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .election-heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .election-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 1rem;
+  }
+  
+  .election-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .election-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.3);
+  }
+  
+  .no-election {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+  }
+  
