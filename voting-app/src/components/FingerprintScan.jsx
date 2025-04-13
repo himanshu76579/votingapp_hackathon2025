@@ -14,6 +14,7 @@ const FingerprintScan = () => {
       
       
       setTimeout(() => {
+        
         //add comment
         navigate('/'); 
       }, 1500);
