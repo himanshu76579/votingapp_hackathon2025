@@ -23,7 +23,7 @@ router.post("/register",registertheParty)
 
 
   
-      const locationName = voter.address?.level; // dynamic key
+      const locationName = voter.address?.[level]; // dynamic key
 
       if (!locationName) return res.status(400).json({ message: `${level} not found in address` });
       console.log("locationname is" , locationName);
