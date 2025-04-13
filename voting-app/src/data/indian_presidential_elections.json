@@ -1,0 +1,179 @@
+[
+    {
+      "year": 2022,
+      "president": "Droupadi Murmu",
+      "party": "BJP",
+      "votes_received": 647303,
+      "total_votes": 1062270,
+      "voter_turnout_percent": 61.53,
+      "result": "Elected",
+      "opposition": "Yashwant Sinha (Opposition)",
+      "state": "India"
+    },
+    {
+      "year": 2017,
+      "president": "Ram Nath Kovind",
+      "party": "BJP",
+      "votes_received": 706314,
+      "total_votes": 1052627,
+      "voter_turnout_percent": 64.6,
+      "result": "Elected",
+      "opposition": "Meira Kumar (Congress)",
+      "state": "India"
+    },
+    {
+      "year": 2012,
+      "president": "Pranab Mukherjee",
+      "party": "Congress",
+      "votes_received": 713763,
+      "total_votes": 1040059,
+      "voter_turnout_percent": 69.3,
+      "result": "Elected",
+      "opposition": "P.A. Sangma (NDA)",
+      "state": "India"
+    },
+    {
+      "year": 2007,
+      "president": "Pratibha Patil",
+      "party": "Congress",
+      "votes_received": 648440,
+      "total_votes": 998158,
+      "voter_turnout_percent": 68.25,
+      "result": "Elected",
+      "opposition": "BJP’s Bhairon Singh Shekhawat",
+      "state": "India"
+    },
+    {
+      "year": 2002,
+      "president": "A. P. J. Abdul Kalam",
+      "party": "Independent",
+      "votes_received": 919277,
+      "total_votes": 1247205,
+      "voter_turnout_percent": 80.1,
+      "result": "Elected",
+      "opposition": "Lakshmi Sahgal (Left)",
+      "state": "India"
+    },
+    {
+      "year": 1997,
+      "president": "K. R. Narayanan",
+      "party": "Congress",
+      "votes_received": 915467,
+      "total_votes": 1344500,
+      "voter_turnout_percent": 67.9,
+      "result": "Elected",
+      "opposition": "Shankar Dayal Sharma (Congress)",
+      "state": "India"
+    },
+    {
+      "year": 1992,
+      "president": "R. Venkataraman",
+      "party": "Congress",
+      "votes_received": 869308,
+      "total_votes": 1227402,
+      "voter_turnout_percent": 71.4,
+      "result": "Elected",
+      "opposition": "P. V. Narasimha Rao (Congress)",
+      "state": "India"
+    },
+    {
+      "year": 1987,
+      "president": "Giani Zail Singh",
+      "party": "Congress",
+      "votes_received": 758000,
+      "total_votes": 1095000,
+      "voter_turnout_percent": 70.2,
+      "result": "Elected",
+      "opposition": "V. V. Giri (Independent)",
+      "state": "India"
+    },
+    {
+      "year": 1982,
+      "president": "Zail Singh",
+      "party": "Congress",
+      "votes_received": 747500,
+      "total_votes": 1020800,
+      "voter_turnout_percent": 69.9,
+      "result": "Elected",
+      "opposition": "N. N. Karanjia",
+      "state": "India"
+    },
+    {
+      "year": 1977,
+      "president": "Neelam Sanjiva Reddy",
+      "party": "Congress (O)",
+      "votes_received": 705500,
+      "total_votes": 1009900,
+      "voter_turnout_percent": 69.5,
+      "result": "Elected",
+      "opposition": "V. V. Giri",
+      "state": "India"
+    },
+    {
+      "year": 1974,
+      "president": "Fakhruddin Ali Ahmed",
+      "party": "Congress",
+      "votes_received": 634000,
+      "total_votes": 922100,
+      "voter_turnout_percent": 69.7,
+      "result": "Elected",
+      "opposition": "N/A",
+      "state": "India"
+    },
+    {
+      "year": 1969,
+      "president": "V. V. Giri",
+      "party": "Independent",
+      "votes_received": 509000,
+      "total_votes": 726500,
+      "voter_turnout_percent": 70.1,
+      "result": "Elected",
+      "opposition": "N. Sanjiva Reddy",
+      "state": "India"
+    },
+    {
+      "year": 1967,
+      "president": "Radhakrishnan",
+      "party": "Congress",
+      "votes_received": 605800,
+      "total_votes": 950400,
+      "voter_turnout_percent": 65.3,
+      "result": "Elected",
+      "opposition": "N/A",
+      "state": "India"
+    },
+    {
+      "year": 1962,
+      "president": "Dr. Sarvepalli Radhakrishnan",
+      "party": "Congress",
+      "votes_received": 727200,
+      "total_votes": 1051700,
+      "voter_turnout_percent": 75.7,
+      "result": "Elected",
+      "opposition": "N/A",
+      "state": "India"
+    },
+    {
+      "year": 1957,
+      "president": "Dr. Rajendra Prasad",
+      "party": "Congress",
+      "votes_received": 713300,
+      "total_votes": 937800,
+      "voter_turnout_percent": 76.3,
+      "result": "Elected",
+      "opposition": "N/A",
+      "state": "India"
+    },
+    {
+      "year": 1952,
+      "president": "Dr. Rajendra Prasad",
+      "party": "Congress",
+      "votes_received": 553300,
+      "total_votes": 831000,
+      "voter_turnout_percent": 75.1,
+      "result": "Elected",
+      "opposition": "N/A",
+      "state": "India"
+    }
+  ]
+  

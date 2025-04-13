@@ -12,6 +12,9 @@ import jwt from "jsonwebtoken";
 import partyRouter from "./routes/party.js";
 import locationRouter from "./routes/location.js"
 import electionRouter from "./routes/election.js";
+import authenticateUser from "./middleware/auth.js";
+import Voter from "./models/voters.js";
+import Party from "./models/party.js";
 
 
 // import authenticateUser from "./middleware/auth.js";
@@ -56,6 +59,40 @@ app.get('/check-auth', (req, res) => {
       res.status(401).json({ message: 'Invalid token' });
     }
   });
+
+
+  app.use("/api/party/vote/:partyId/:level",authenticateUser, async (req, res) => {
+    const { partyId, level } = req.params;
+  
+    try {
+      console.log("start to vote");
+      
+      const voter = await Voter.findById(req.user.id);
+      if (!voter) return res.status(404).json({ message: "Voter not found." });
+  
+      if (voter.voted?.[level]) {
+        return res.status(403).json({ message: `You have already voted in ${level} election.` });
+      }
+  
+      const party = await Party.findById(partyId);
+      if (!party) return res.status(404).json({ message: "Party not found." });
+  
+      // ✅ Increment vote count
+      party.voteCount += 1;
+      await party.save();
+  
+      // ✅ Mark the user as voted
+      voter.voted[level] = true;
+      await voter.save();
+  
+      res.status(200).json({ message: "Vote recorded successfully." });
+  
+    } catch (err) {
+      console.error("Vote error:", err.message);
+      res.status(500).json({ message: "Server error while recording vote." });
+    }
+  })
+  
 // app.use("/api/",authStatusRoute)
 
 // app.use("/api/message",messageRouter);

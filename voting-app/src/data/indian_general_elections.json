@@ -1,0 +1,147 @@
+[
+  {
+    "year": "1951",
+    "lok_sabha_term": "1st",
+    "total_seats": 489,
+    "voter_turnout_percent": 44.87,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Jawaharlal Nehru"
+  },
+  {
+    "year": "1957",
+    "lok_sabha_term": "2nd",
+    "total_seats": 494,
+    "voter_turnout_percent": 45.44,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Jawaharlal Nehru"
+  },
+  {
+    "year": "1962",
+    "lok_sabha_term": "3rd",
+    "total_seats": 494,
+    "voter_turnout_percent": 55.42,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Jawaharlal Nehru"
+  },
+  {
+    "year": "1967",
+    "lok_sabha_term": "4th",
+    "total_seats": 520,
+    "voter_turnout_percent": 61.04,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Indira Gandhi"
+  },
+  {
+    "year": "1971",
+    "lok_sabha_term": "5th",
+    "total_seats": 518,
+    "voter_turnout_percent": 55.27,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Indira Gandhi"
+  },
+  {
+    "year": "1977",
+    "lok_sabha_term": "6th",
+    "total_seats": 542,
+    "voter_turnout_percent": 60.49,
+    "ruling_party": "Janata Party",
+    "prime_minister": "Morarji Desai"
+  },
+  {
+    "year": "1980",
+    "lok_sabha_term": "7th",
+    "total_seats": 529,
+    "voter_turnout_percent": 56.92,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Indira Gandhi"
+  },
+  {
+    "year": "1984",
+    "lok_sabha_term": "8th",
+    "total_seats": 541,
+    "voter_turnout_percent": 64.01,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "Rajiv Gandhi"
+  },
+  {
+    "year": "1989",
+    "lok_sabha_term": "9th",
+    "total_seats": 529,
+    "voter_turnout_percent": 61.95,
+    "ruling_party": "Janata Dal",
+    "prime_minister": "V. P. Singh"
+  },
+  {
+    "year": "1991",
+    "lok_sabha_term": "10th",
+    "total_seats": 534,
+    "voter_turnout_percent": 56.73,
+    "ruling_party": "Indian National Congress",
+    "prime_minister": "P. V. Narasimha Rao"
+  },
+  {
+    "year": "1996",
+    "lok_sabha_term": "11th",
+    "total_seats": 543,
+    "voter_turnout_percent": 57.94,
+    "ruling_party": "United Front",
+    "prime_minister": "H. D. Deve Gowda / I. K. Gujral"
+  },
+  {
+    "year": "1998",
+    "lok_sabha_term": "12th",
+    "total_seats": 543,
+    "voter_turnout_percent": 61.97,
+    "ruling_party": "Bharatiya Janata Party",
+    "prime_minister": "Atal Bihari Vajpayee"
+  },
+  {
+    "year": "1999",
+    "lok_sabha_term": "13th",
+    "total_seats": 543,
+    "voter_turnout_percent": 59.99,
+    "ruling_party": "National Democratic Alliance (BJP-led)",
+    "prime_minister": "Atal Bihari Vajpayee"
+  },
+  {
+    "year": "2004",
+    "lok_sabha_term": "14th",
+    "total_seats": 543,
+    "voter_turnout_percent": 58.07,
+    "ruling_party": "United Progressive Alliance (INC-led)",
+    "prime_minister": "Manmohan Singh"
+  },
+  {
+    "year": "2009",
+    "lok_sabha_term": "15th",
+    "total_seats": 543,
+    "voter_turnout_percent": 58.21,
+    "ruling_party": "United Progressive Alliance (INC-led)",
+    "prime_minister": "Manmohan Singh"
+  },
+  {
+    "year": "2014",
+    "lok_sabha_term": "16th",
+    "total_seats": 543,
+    "voter_turnout_percent": 66.44,
+    "ruling_party": "National Democratic Alliance (BJP-led)",
+    "prime_minister": "Narendra Modi"
+  },
+  {
+    "year": "2019",
+    "lok_sabha_term": "17th",
+    "total_seats": 543,
+    "voter_turnout_percent": 67.4,
+    "ruling_party": "National Democratic Alliance (BJP-led)",
+    "prime_minister": "Narendra Modi"
+  },
+  {
+    "year": "2024",
+    "lok_sabha_term": "18th",
+    "total_seats": 543,
+    "voter_turnout_percent": 66.33,
+    "ruling_party": "National Democratic Alliance (BJP-led)",
+    "prime_minister": "Narendra Modi"
+  }
+]
+

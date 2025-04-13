@@ -4,7 +4,6 @@ export const partySchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true
   },
   symbol: {
     type: String, // URL to the party symbol image
@@ -14,6 +13,10 @@ export const partySchema = new mongoose.Schema({
   location : {
     type : String,
     required : true
+  },
+  voteCount: {
+    type: Number,
+    default: 0
   }
 }, { timestamps: true });
 

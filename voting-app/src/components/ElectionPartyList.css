@@ -74,4 +74,11 @@
     font-size: 18px;
     margin-top: 20px;
   }
+
+  .evm-vote-button.voted {
+    background-color: #4caf50;
+    color: white;
+    cursor: not-allowed;
+  }
+  
   

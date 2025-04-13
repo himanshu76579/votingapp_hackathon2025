@@ -1,0 +1,68 @@
+.about-container {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-container h2 {
+    font-size: 1.5rem;
+    color: #212529;
+    border-left: 4px solid #0d6efd;
+    padding-left: 12px;
+    margin-top: 30px;
+  }
+  
+  .about-container .intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .about-container ol,
+  .about-container ul {
+    margin-top: 15px;
+    padding-left: 25px;
+  }
+  
+  .about-container li {
+    margin-bottom: 10px;
+  }
+  
+  .about-container section {
+    margin-bottom: 40px;
+  }
+  
+  .about-footer {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #777;
+  }
+
+  
+  .email-link {
+    color: #0d6efd; /* Keep link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional, for bold text */
+    cursor: pointer; /* Ensure it looks clickable */
+  }
+  
+  .email-link:hover {
+    text-decoration: none; /* Prevent underline on hover */
+    color: #007bff; /* Optional: change color on hover */
+  }
