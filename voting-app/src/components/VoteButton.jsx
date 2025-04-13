@@ -10,8 +10,9 @@ const VoteButton = () => {
     try {
       const res = await fetch('http://localhost:8000/check-auth', {
         method: 'GET',
-        credentials: 'include', // Required for cookies
+        credentials: 'include',
       });
+      
 
       if (res.status === 200) {
         // Authenticated

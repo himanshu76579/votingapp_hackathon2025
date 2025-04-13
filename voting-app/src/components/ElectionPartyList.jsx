@@ -1,62 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-
-// const ElectionPartyList = () => {
-//   const { level } = useParams(); // local / state / country
-//   const [parties, setParties] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const fetchParties = async () => {
-//       try {
-//         console.log("fething parties");
-//         const res = await fetch(`http://localhost:8000/api/party/${level}`, {
-//           credentials: "include"
-//         });
-        
-
-//         console.log(" parties fetched");
-
-//         if (!res.ok) throw new Error("Failed to fetch");
-
-//         const data = await res.json();
-//         console.log("parties are ",data);
-//         setParties(data);
-//         console.log("parties are ",parties);
-//       } catch (err) {
-//         console.error(err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchParties();
-//   }, [level]);
-
-//   return (
-//     <div>
-//       <h2>{level.charAt(0).toUpperCase() + level.slice(1)} Election - Parties</h2>
-//       {loading ? (
-//         <p>Loading...</p>
-//       ) : parties.length > 0 ? (
-//         <ul>
-//           {parties.map((party) => (
-//             <li key={party._id}>
-//               <strong>{party.name}</strong> - {party.symbol}
-//             </li>
-//           ))}
-//         </ul>
-//       ) : (
-//         <p>No parties available in your {level}.</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ElectionPartyList;
-
-
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ElectionPartyList.css";
@@ -88,9 +29,22 @@ const ElectionPartyList = () => {
     fetchParties();
   }, [level]);
 
-  const handleVote = (partyId) => {
-    setSelectedPartyId(partyId);
-    // Optionally you can call an API to record the vote here
+  const handleVote = async (partyId) => {
+    try {
+      console.log("handling vote")
+      const res = await fetch(`http://localhost:8000/api/party/vote/${partyId}/${level}`, {
+        method: "POST",
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message);
+
+      setSelectedPartyId(partyId);
+      alert("Vote successfully recorded!");
+    } catch (err) {
+      alert(err.message);
+    }
   };
 
   return (
@@ -105,7 +59,7 @@ const ElectionPartyList = () => {
           {parties.map((party) => (
             <div className="evm-row" key={party._id}>
               <img
-                src={party.logo || "/placeholder-symbol.png"}
+                src={party.symbol || "/placeholder-symbol.png"}
                 alt={`${party.name} symbol`}
                 className="evm-symbol"
               />
@@ -115,8 +69,9 @@ const ElectionPartyList = () => {
                   selectedPartyId === party._id ? "voted" : ""
                 }`}
                 onClick={() => handleVote(party._id)}
+                disabled={selectedPartyId !== null}
               >
-                Vote
+                {selectedPartyId === party._id ? "Voted" : "Vote"}
               </button>
             </div>
           ))}
@@ -129,7 +84,3 @@ const ElectionPartyList = () => {
 };
 
 export default ElectionPartyList;
-
-
-
-

@@ -35,7 +35,13 @@ const voterSchema = new mongoose.Schema({
     address: {
         type: addressSchema,
         required: true,
-    }
+    },
+voted: {
+    local: { type: Boolean, default: false },
+    state: { type: Boolean, default: false },
+    country: { type: Boolean, default: false }
+  }
+  
 },{timestamps : true})
 
 const Voter =  mongoose.model("Voter",voterSchema);

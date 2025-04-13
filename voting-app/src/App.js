@@ -8,8 +8,7 @@ import Home from './components/Home';
 import FingerprintScan from './components/FingerprintScan';
 import ElectionLevel from './components/ElectionLevel';
 import ElectionPartyList from './components/ElectionPartyList';
-import States from './components/States';
-import CheckElection from './components/CheckElection';
+
 
 
 
@@ -24,8 +23,7 @@ function App() {
         <Route path="/fingerprint" element={<FingerprintScan />} />
         <Route path="/vote" element={<ElectionLevel />} />
         <Route path="/election/:level" element={<ElectionPartyList />} />
-        <Route path="/states" element={<States />
-        <Route path="/villages" element={<Villages />} /> */}
+       
       </Routes>
 
       <Footer />

@@ -14,6 +14,10 @@ export const partySchema = new mongoose.Schema({
   location : {
     type : String,
     required : true
+  },
+  voteCount: {
+    type: Number,
+    default: 0
   }
 }, { timestamps: true });
 
