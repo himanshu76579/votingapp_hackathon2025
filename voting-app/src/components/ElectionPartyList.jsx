@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; // ✅ Added useNavigate
 import "./ElectionPartyList.css";
 
 const ElectionPartyList = () => {
+  const navigate = useNavigate();
   const { level } = useParams(); // local / state / country
   const [parties, setParties] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,7 +42,9 @@ const ElectionPartyList = () => {
       if (!res.ok) throw new Error(data.message);
 
       setSelectedPartyId(partyId);
-      alert("Vote successfully recorded!");
+      navigate("/fingerprint");
+     
+
     } catch (err) {
       alert(err.message);
     }

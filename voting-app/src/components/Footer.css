@@ -1,11 +1,27 @@
-/* Footer.css */
 .footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #002366;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+  text-align: center;
+  padding: 15px;
+  background-color: #002366;
+  color: white;
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.footer.visible {
+  opacity: 1;
+}
+
+.footer a {
+  color: #aad4ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 6px 0; /* small space between lines */
+}

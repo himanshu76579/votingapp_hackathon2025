@@ -4,7 +4,6 @@ export const partySchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true
   },
   symbol: {
     type: String, // URL to the party symbol image

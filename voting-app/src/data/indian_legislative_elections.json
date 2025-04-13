@@ -1,0 +1,497 @@
+[
+    {
+      "state": "West Bengal",
+      "year": 2021,
+      "total_seats": 294,
+      "voter_turnout_percent": 83.1,
+      "ruling_party": "TMC",
+      "seats_won": {
+        "TMC": 213,
+        "BJP": 77,
+        "Left Front": 1,
+        "Congress": 2,
+        "Others": 1
+      }
+    },
+    {
+      "state": "Tamil Nadu",
+      "year": 2021,
+      "total_seats": 234,
+      "voter_turnout_percent": 72.8,
+      "ruling_party": "DMK",
+      "seats_won": {
+        "DMK": 133,
+        "AIADMK": 66,
+        "BJP": 4,
+        "Congress": 18,
+        "Others": 13
+      }
+    },
+    {
+      "state": "Kerala",
+      "year": 2021,
+      "total_seats": 140,
+      "voter_turnout_percent": 74.03,
+      "ruling_party": "LDF",
+      "seats_won": {
+        "LDF": 99,
+        "UDF": 41,
+        "NDA": 0
+      }
+    },
+    {
+      "state": "Assam",
+      "year": 2021,
+      "total_seats": 126,
+      "voter_turnout_percent": 82.24,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 60,
+        "INC": 29,
+        "AIUDF": 13,
+        "AGP": 9,
+        "Others": 5
+      }
+    },
+    {
+      "state": "Uttar Pradesh",
+      "year": 2022,
+      "total_seats": 403,
+      "voter_turnout_percent": 61.1,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 255,
+        "SP": 111,
+        "Congress": 2,
+        "Others": 35
+      }
+    },
+    {
+      "state": "Punjab",
+      "year": 2022,
+      "total_seats": 117,
+      "voter_turnout_percent": 71.2,
+      "ruling_party": "AAP",
+      "seats_won": {
+        "AAP": 92,
+        "Congress": 18,
+        "BJP": 2,
+        "Shiromani Akali Dal": 5
+      }
+    },
+    {
+      "state": "Goa",
+      "year": 2022,
+      "total_seats": 40,
+      "voter_turnout_percent": 79.2,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 20,
+        "INC": 11,
+        "AAP": 2,
+        "MGP": 2,
+        "Others": 5
+      }
+    },
+    {
+      "state": "Manipur",
+      "year": 2022,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.5,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 32,
+        "Congress": 4,
+        "NPP": 7,
+        "Others": 17
+      }
+    },
+    {
+      "state": "Meghalaya",
+      "year": 2023,
+      "total_seats": 60,
+      "voter_turnout_percent": 86.6,
+      "ruling_party": "NPP",
+      "seats_won": {
+        "NPP": 26,
+        "INC": 5,
+        "BJP": 2,
+        "UDP": 6,
+        "Others": 21
+      }
+    },
+    {
+      "state": "Nagaland",
+      "year": 2023,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.4,
+      "ruling_party": "NDPP-BJP",
+      "seats_won": {
+        "NDPP": 25,
+        "BJP": 12,
+        "NCP": 4,
+        "Others": 19
+      }
+    },
+    {
+      "state": "Tripura",
+      "year": 2023,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.2,
+      "ruling_party": "BJP-IPFT",
+      "seats_won": {
+        "BJP": 33,
+        "CPIM": 13,
+        "Congress": 1,
+        "IPFT": 9,
+        "Others": 4
+      }
+    },
+    {
+      "state": "Uttarakhand",
+      "year": 2017,
+      "total_seats": 70,
+      "voter_turnout_percent": 65.6,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 57,
+        "INC": 11,
+        "Others": 2
+      }
+    },
+    {
+      "state": "Himachal Pradesh",
+      "year": 2017,
+      "total_seats": 68,
+      "voter_turnout_percent": 75.0,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 44,
+        "INC": 21,
+        "Others": 3
+      }
+    },
+    {
+      "state": "Assam",
+      "year": 2016,
+      "total_seats": 126,
+      "voter_turnout_percent": 84.72,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 60,
+        "INC": 26,
+        "AIUDF": 13,
+        "AGP": 14,
+        "Others": 3
+      }
+    },
+    {
+      "state": "Nagaland",
+      "year": 2018,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.4,
+      "ruling_party": "NDPP-BJP",
+      "seats_won": {
+        "NDPP": 18,
+        "BJP": 12,
+        "NCP": 4,
+        "Others": 26
+      }
+    },
+    {
+      "state": "Sikkim",
+      "year": 2019,
+      "total_seats": 32,
+      "voter_turnout_percent": 79.6,
+      "ruling_party": "SDF",
+      "seats_won": {
+        "SDF": 17,
+        "SKM": 15
+      }
+    },
+    {
+      "state": "Meghalaya",
+      "year": 2018,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.1,
+      "ruling_party": "NPP",
+      "seats_won": {
+        "NPP": 19,
+        "INC": 21,
+        "BJP": 2,
+        "UDP": 6,
+        "Others": 12
+      }
+    },
+    {
+      "state": "Tripura",
+      "year": 2018,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.7,
+      "ruling_party": "BJP-IPFT",
+      "seats_won": {
+        "BJP": 35,
+        "CPIM": 16,
+        "Congress": 1,
+        "IPFT": 8
+      }
+    },
+    {
+      "state": "Goa",
+      "year": 2017,
+      "total_seats": 40,
+      "voter_turnout_percent": 83.0,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 13,
+        "INC": 17,
+        "MGP": 3,
+        "AAP": 0,
+        "Others": 7
+      }
+    },
+    {
+      "state": "Andaman and Nicobar Islands",
+      "year": 2019,
+      "total_seats": 1,
+      "voter_turnout_percent": 75.0,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 1
+      }
+    },
+    {
+      "state": "Lakshadweep",
+      "year": 2020,
+      "total_seats": 1,
+      "voter_turnout_percent": 85.0,
+      "ruling_party": "Indian National Congress",
+      "seats_won": {
+        "INC": 1
+      }
+    },
+    {
+      "state": "Delhi",
+      "year": 2020,
+      "total_seats": 70,
+      "voter_turnout_percent": 62.6,
+      "ruling_party": "AAP",
+      "seats_won": {
+        "AAP": 62,
+        "BJP": 8
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "year": 2018,
+      "total_seats": 90,
+      "voter_turnout_percent": 76.6,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 68,
+        "BJP": 15,
+        "Others": 7
+      }
+    },
+    {
+      "state": "Rajasthan",
+      "year": 2018,
+      "total_seats": 200,
+      "voter_turnout_percent": 74.1,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 99,
+        "BJP": 73,
+        "Others": 28
+      }
+    },
+    {
+      "state": "Madhya Pradesh",
+      "year": 2018,
+      "total_seats": 230,
+      "voter_turnout_percent": 75.0,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 114,
+        "BJP": 109,
+        "Others": 7
+      }
+    },
+    {
+      "state": "Bihar",
+      "year": 2020,
+      "total_seats": 243,
+      "voter_turnout_percent": 57.0,
+      "ruling_party": "NDA",
+      "seats_won": {
+        "BJP": 74,
+        "JD(U)": 43,
+        "RJD": 75,
+        "INC": 19,
+        "Others": 32
+      }
+    },
+    {
+      "state": "Jharkhand",
+      "year": 2019,
+      "total_seats": 81,
+      "voter_turnout_percent": 66.2,
+      "ruling_party": "JMM-Congress",
+      "seats_won": {
+        "JMM": 30,
+        "BJP": 25,
+        "INC": 16,
+        "Others": 10
+      }
+    },
+    {
+      "state": "Gujarat",
+      "year": 2022,
+      "total_seats": 182,
+      "voter_turnout_percent": 63.3,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 156,
+        "INC": 16,
+        "AAP": 5,
+        "Others": 5
+      }
+    },
+    {
+      "state": "Maharashtra",
+      "year": 2019,
+      "total_seats": 288,
+      "voter_turnout_percent": 64.4,
+      "ruling_party": "MVA",
+      "seats_won": {
+        "BJP": 105,
+        "Shiv Sena": 56,
+        "NCP": 54,
+        "INC": 44,
+        "Others": 29
+      }
+    },
+    {
+      "state": "Karnataka",
+      "year": 2023,
+      "total_seats": 224,
+      "voter_turnout_percent": 70.3,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 135,
+        "BJP": 66,
+        "JDS": 22,
+        "Others": 1
+      }
+    },
+    {
+      "state": "Odisha",
+      "year": 2019,
+      "total_seats": 147,
+      "voter_turnout_percent": 74.9,
+      "ruling_party": "BJD",
+      "seats_won": {
+        "BJD": 112,
+        "BJP": 8,
+        "INC": 9,
+        "Others": 18
+      }
+    },
+    {
+      "state": "Andhra Pradesh",
+      "year": 2019,
+      "total_seats": 175,
+      "voter_turnout_percent": 79.2,
+      "ruling_party": "YSRCP",
+      "seats_won": {
+        "YSRCP": 151,
+        "TDP": 23,
+        "BJP": 2,
+        "Others": 3
+      }
+    },
+    {
+      "state": "Telangana",
+      "year": 2018,
+      "total_seats": 119,
+      "voter_turnout_percent": 73.2,
+      "ruling_party": "TRS",
+      "seats_won": {
+        "TRS": 88,
+        "INC": 19,
+        "Others": 12
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "year": 2023,
+      "total_seats": 90,
+      "voter_turnout_percent": 76.5,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 68,
+        "BJP": 15,
+        "Others": 7
+      }
+    },
+    {
+      "state": "Rajasthan",
+      "year": 2023,
+      "total_seats": 200,
+      "voter_turnout_percent": 74.5,
+      "ruling_party": "INC",
+      "seats_won": {
+        "INC": 99,
+        "BJP": 73,
+        "Others": 28
+      }
+    },
+    {
+      "state": "Uttarakhand",
+      "year": 2023,
+      "total_seats": 70,
+      "voter_turnout_percent": 68.9,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 47,
+        "INC": 20,
+        "Others": 3
+      }
+    },
+    {
+      "state": "Jammu and Kashmir",
+      "year": 2020,
+      "total_seats": 87,
+      "voter_turnout_percent": 62.1,
+      "ruling_party": "BJP",
+      "seats_won": {
+        "BJP": 25,
+        "National Conference": 16,
+        "INC": 5,
+        "Others": 41
+      }
+    },
+    {
+      "state": "Lakshadweep",
+      "year": 2020,
+      "total_seats": 1,
+      "voter_turnout_percent": 84.0,
+      "ruling_party": "Indian National Congress",
+      "seats_won": {
+        "INC": 1
+      }
+    },
+    {
+      "state": "Nagaland",
+      "year": 2020,
+      "total_seats": 60,
+      "voter_turnout_percent": 85.5,
+      "ruling_party": "NDPP",
+      "seats_won": {
+        "NDPP": 27,
+        "BJP": 14,
+        "NCP": 3,
+        "Others": 16
+      }
+    }
+]

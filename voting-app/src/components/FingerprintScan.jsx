@@ -9,10 +9,16 @@ const FingerprintScan = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVerified(true);
+      alert("Fingerprint verified successfully!");
+
+      
+      
       setTimeout(() => {
-        navigate('/dashboard'); // or your next page
+        navigate('/');
       }, 1500);
     }, 3000);
+   
+
     return () => clearTimeout(timer);
   }, [navigate]);
 

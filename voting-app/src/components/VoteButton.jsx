@@ -28,8 +28,8 @@ const VoteButton = () => {
   };
 
   return (
-    <button onClick={handleVoteClick} className="vote-btn">
-      Vote
+    <button onClick={handleVoteClick} className="vote-btn" >
+      vote
     </button>
   );
 };
