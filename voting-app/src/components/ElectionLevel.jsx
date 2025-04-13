@@ -32,17 +32,17 @@ const ElectionLevel = () => {
       <h2>Election Options</h2>
 
       {elections.local && (
-        <button onClick={() => window.location.href = "/election/:local"}>
+        <button onClick={() => window.location.href = "/election/local"}>
           Vote in Local Election
         </button>
       )}
       {elections.state && (
-        <button onClick={() => window.location.href = "/election/:state"}>
+        <button onClick={() => window.location.href = "/election/state"}>
           Vote in State Election
         </button>
       )}
       {elections.country && (
-        <button onClick={() => window.location.href = "/election/:country"}>
+        <button onClick={() => window.location.href = "/election/country"}>
           Vote in National Election
         </button>
       )}

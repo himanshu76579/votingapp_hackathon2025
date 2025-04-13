@@ -3,29 +3,28 @@ import User from "../models/user.js"; // adjust path as needed
 export const registerUser = async (req, res) => {
   try {
     console.log("try to register the user");
-    const { fullname, gender, dob, aadharNo, voterIdNo,address } = req.body;
+    const { fullname, gender, dob, aadharNo, voterIdNo, address } = req.body;
 
     // Check if all fields are present
-    if (!fullname || !gender || !dob || !aadharNo || !voterIdNo || !address ) {
+    if (!fullname || !gender || !dob || !aadharNo || !voterIdNo || !address) {
       return res.status(400).json({ message: "All fields are required." });
     }
 
-    if(!address.local || !address.state || !address.country  ){
-      return res.status(400).json({ message: "All fields are required." });
+    if (!address.local || !address.state || !address.country) {
+      return res.status(400).json({ message: "All address fields are required." });
     }
 
-
-
+    // Check if user already exists by Aadhar or Voter ID
     const existingUser = await User.findOne({
-        $or: [{ aadharNo: aadharNo }, { voterIdNo: voterIdNo }],
-      });
+      $or: [{ aadharNo }, { voterIdNo }]
+    });
 
-      if(existingUser){
-        return res.json({message : "user already exists" });
-      }
+    if (existingUser) {
+      return res.status(409).json({ message: "User already exists." });
+    }
 
-    // Create and save user
-    const newUser = new User({ fullname, gender, dob, aadharNo, voterIdNo,address });
+    // Create and save new user
+    const newUser = new User({ fullname, gender, dob, aadharNo, voterIdNo, address });
     await newUser.save();
 
     return res.status(201).json({
@@ -37,7 +36,7 @@ export const registerUser = async (req, res) => {
         dob: newUser.dob,
         aadharNo: newUser.aadharNo,
         voterIdNo: newUser.voterIdNo,
-        address : newUser.address,
+        address: newUser.address,
       },
     });
 
